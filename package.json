@@ -1,0 +1,15 @@
+{
+  "name": "algebra3.cxx",
+  "version": "3.1.0",
+  "description": "Vector utilities for 2, 3, and 4 element vectors, all inline - by Jean-Francois Doue, Paul S. Heckbert, and J. Nagle (1993).",
+  "keywords": ["c++", "library", "vector", "math", "algebra", "inline"],
+  "license": "CC0-1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodef/algebra3.cxx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nodef/algebra3.cxx/issues"
+  },
+  "homepage": "https://github.com/nodef/algebra3.cxx#readme"
+}
