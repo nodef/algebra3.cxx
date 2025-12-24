@@ -8,7 +8,7 @@
 //
 //	From "Graphics Gems IV / Edited by Paul S. Heckbert
 //	Academic Press, 1994, ISBN 0-12-336156-9
-//	"You are free to use and modify this code in any way 
+//	"You are free to use and modify this code in any way
 //	you like." (p. xv)
 //
 //	Modified by J. Nagle, March 1997
@@ -17,7 +17,7 @@
 //	-	All checking is via the standard "assert" macro.
 //	-	Stream I/O is disabled for portability, but can be
 //		re-enabled by defining ALGEBRA3IOSTREAMS.
-//	
+//
 #ifndef ALGEBRA3H
 #define ALGEBRA3H
 
@@ -88,7 +88,8 @@ vec2& operator -= ( const vec2& v );	// decrementation by a vec2
 vec2& operator *= ( const double d );	// multiplication by a constant
 vec2& operator /= ( const double d );	// division by a constant
 double& operator [] ( int i);			// indexing
-double vec2::operator [] ( int i) const;// read-only indexing
+// FIX: extra qualification on member 'operator[]' (@wolfram77)
+double operator [] ( int i) const;// read-only indexing
 
 // special functions
 
@@ -115,7 +116,8 @@ friend int operator != (const vec2& a, const vec2& b);	    // v1 != v2 ?
 #ifdef ALGEBRA3IOSTREAMS
 friend ostream& operator << (ostream& s, const vec2& v);	// output to stream
 friend istream& operator >> (istream& s, vec2& v);	    // input from strm.
-#endif ALGEBRA3IOSTREAMS
+// FIX: extra tokens at end of #endif directive (@wolfram77)
+#endif // ALGEBRA3IOSTREAMS
 
 friend void swap(vec2& a, vec2& b);						// swap v1 & v2
 friend vec2 min(const vec2& a, const vec2& b);		    // min(v1, v2)
@@ -520,7 +522,7 @@ inline vec2 operator * (const mat3& a, const vec2& v) {
     return av;
 }
 
-inline vec2 operator * (const vec2& v, const mat3& a) 
+inline vec2 operator * (const vec2& v, const mat3& a)
 { return a.transpose() * v; }
 
 inline double operator * (const vec2& a, const vec2& b)
