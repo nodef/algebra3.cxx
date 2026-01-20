@@ -1,6 +1,6 @@
 {
   "name": "algebra3.cxx",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "description": "Vector utilities for 2, 3, and 4 element vectors, all inline - by Jean-Francois Doue, Paul S. Heckbert, and J. Nagle (1993).",
   "keywords": [
     "c++",
